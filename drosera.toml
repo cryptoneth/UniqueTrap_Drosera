@@ -1,0 +1,20 @@
+# Example Drosera configuration for the Sentiment Trap guide.
+# Replace the placeholder values before running `drosera apply`.
+	hereum_rpc = "https://your-hoodi-rpc"
+drosera_rpc = "https://relay.hoodi.drosera.io"
+eth_chain_id = 560048
+drosera_address = "0x91cB447BaFc6e0EA0F4Fe056F5a9b1F14bb06e5D"
+
+[traps.sentiment_trap]
+name = "Sentiment Trap"
+description = "Alerts when NEGATIVE sentiment appears in ChatGPT feed"
+path = "out/SentimentTrap.sol/SentimentTrap.json"
+response_contract = "0xYourResponseContract"
+response_function = "respond(bytes)"
+cooldown_period_blocks = 33
+min_number_of_operators = 1
+max_number_of_operators = 2
+block_sample_size = 1
+private_trap = true
+whitelist = ["0xYourOperatorAddress"]
+# address = "0xYourTrapConfigOnceApplied"

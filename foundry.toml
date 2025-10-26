@@ -1,0 +1,7 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = []
+
+[rpc_endpoints]
+hoodi = "https://your-hoodi-rpc"
